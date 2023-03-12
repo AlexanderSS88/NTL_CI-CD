@@ -23,5 +23,3 @@ class StockViewSet(ModelViewSet):
     search_fields = ['products__description', 'products__title']
     filterset_fields = ['products']
     pagination_class = LimitOffsetPagination
-
-
