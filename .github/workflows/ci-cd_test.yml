@@ -33,9 +33,8 @@ jobs:
 #          POSTGRES_PORT: ${{ env.POSTGRES_PORT }}
 #          SECRET_KEY: ${{ env.SECRET_KEY }}
 #          ALLOWED_HOSTS: ${{ env.ALLOWED_HOSTS }}
-
     steps: 
-      - name: check on changes
+      - name: check for changes
         uses: actions/checkout@v3
       - name: install python3 
         uses: actions/setup-python@v4
