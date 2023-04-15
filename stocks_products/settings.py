@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'logistic',
+    'stocks_products'
 ]
 
 MIDDLEWARE = [
