@@ -33,7 +33,13 @@ jobs:
 #          POSTGRES_PORT: ${{ env.POSTGRES_PORT }}
 #          SECRET_KEY: ${{ env.SECRET_KEY }}
 #          ALLOWED_HOSTS: ${{ env.ALLOWED_HOSTS }}
-    steps: 
+        ports: 5432:5432
+        options:
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 3
+    steps:
       - name: check for changes
         uses: actions/checkout@v3
       - name: install python3 
