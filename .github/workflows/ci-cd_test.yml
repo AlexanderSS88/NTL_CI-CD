@@ -34,7 +34,7 @@ jobs:
 #          SECRET_KEY: ${{ env.SECRET_KEY }}
 #          ALLOWED_HOSTS: ${{ env.ALLOWED_HOSTS }}
         ports:
-          -5432:5432
+          - 5432:5432
         options:
           --health-cmd pg_isready
           --health-interval 5s
